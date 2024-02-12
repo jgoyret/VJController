@@ -85,9 +85,6 @@ MonoBehaviour:
   aerosolAnisotropy:
     m_OverrideState: 0
     m_Value: 0
-  numberOfBounces:
-    m_OverrideState: 0
-    m_Value: 8
   groundTint:
     m_OverrideState: 1
     m_Value: {r: 0.122641504, g: 0.1043775, b: 0.09313812, a: 1}
@@ -222,13 +219,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -11.3
   maximumHeight:
     m_OverrideState: 1
     m_Value: 50
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 12.69
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
