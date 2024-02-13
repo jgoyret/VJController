@@ -6,6 +6,7 @@ using UnityEngine.Rendering.HighDefinition;
 using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class VjController : MonoBehaviour
 {
@@ -33,7 +34,11 @@ public class VjController : MonoBehaviour
 
     public Animator ligth_animator;
     public HDAdditionalLightData[] ligths;
+    public GameObject dLightOne;
+    public GameObject dLightTwo;
 
+    private Boolean dLightSwitch = false;
+    private Boolean button_dLightSwitch = false;
     private string modeLigth = "default";
 
     // [Header("UI ELEMENTS")]
@@ -216,7 +221,7 @@ public class VjController : MonoBehaviour
     public void setFOVcamera(CinemachineVirtualCamera _vcam, float _value)
     {
         _vcam.m_Lens.FieldOfView = _value;
-        Debug.Log("Valor FOV: " + _value + " | " + _vcam);
+        //Debug.Log("Valor FOV: " + _value + " | " + _vcam);
     }
 
 
@@ -271,7 +276,7 @@ public class VjController : MonoBehaviour
         else if (modeLigth == "random")
         {
             for (int i = 0; i < ligths.Length; i++)
-                ligths[i].intensity = Random.Range(0f, ligthIntesitySlider.value);
+                ligths[i].intensity = UnityEngine.Random.Range(0f, ligthIntesitySlider.value);
 
         }
     }
@@ -281,6 +286,41 @@ public class VjController : MonoBehaviour
     public void speedAnimatorLigths()
     {
         ligth_animator.speed = ligthAnimSpeed.value;
+    }
+
+    public void enableDLightSwitch()
+    {
+        dLightSwitch = !dLightSwitch;
+
+        if (!dLightSwitch)
+        {
+            dLightOne.SetActive(true);
+            dLightTwo.SetActive(true);
+        }
+        else
+        {
+            setDLightSwitch();
+        }
+        Debug.Log("enabledSwitch: " + dLightSwitch);
+    }
+
+    public void setDLightSwitch()
+    {
+        if (dLightSwitch)
+        {
+            button_dLightSwitch = !button_dLightSwitch;
+            if (button_dLightSwitch)
+            {
+                dLightOne.SetActive(true);
+                dLightTwo.SetActive(false);
+            }
+            else
+            {
+                dLightOne.SetActive(false);
+                dLightTwo.SetActive(true);
+            }
+            Debug.Log("buttonSwitch: " + button_dLightSwitch);
+        }
     }
 
 
