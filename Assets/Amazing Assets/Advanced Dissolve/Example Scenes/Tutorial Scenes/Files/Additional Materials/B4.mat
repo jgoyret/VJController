@@ -93,7 +93,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseColorMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5ea11f1b958aa384f831ad96908da1ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -125,7 +125,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 5ea11f1b958aa384f831ad96908da1ed, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -223,13 +223,13 @@ Material:
     - _AdvancedDissolveCutoutSimpleMapsScreenSpaceUVScale: 0
     - _AdvancedDissolveCutoutSimpleMapsTriplanarMappingSpace: 0
     - _AdvancedDissolveCutoutStandardBaseInvert: 0
-    - _AdvancedDissolveCutoutStandardClip: 0.5
+    - _AdvancedDissolveCutoutStandardClip: 0.02
     - _AdvancedDissolveCutoutStandardMap1Channel: 3
     - _AdvancedDissolveCutoutStandardMap1Intensity: 1
     - _AdvancedDissolveCutoutStandardMap1Invert: 0
     - _AdvancedDissolveCutoutStandardMap2Channel: 3
     - _AdvancedDissolveCutoutStandardMap2Intensity: 1
-    - _AdvancedDissolveCutoutStandardMap2Invert: 1
+    - _AdvancedDissolveCutoutStandardMap2Invert: 0
     - _AdvancedDissolveCutoutStandardMap3Channel: 3
     - _AdvancedDissolveCutoutStandardMap3Intensity: 1
     - _AdvancedDissolveCutoutStandardMap3Invert: 0
@@ -443,8 +443,8 @@ Material:
     - _AdvancedDissolveEdgeUVDistortionMapScroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeUVDistortionMapTiling: {r: 1, g: 1, b: 1, a: 1}
     - _AdvancedDissolveMetaPassObjectPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 1}
-    - _Color: {r: 0.27358484, g: 0.27358484, b: 0.27358484, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 0}
