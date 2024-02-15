@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 2
   threshold:
     m_OverrideState: 1
-    m_Value: 0.54
+    m_Value: 0.05
   intensity:
     m_OverrideState: 1
     m_Value: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: 0.875
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 0.3774137, b: 0, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   dirtTexture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Value: 50
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 4.52
+    m_Value: 1.13
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1

@@ -7,6 +7,7 @@ using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEditor.Rendering;
 
 public class VjController : MonoBehaviour
 {
@@ -26,6 +27,7 @@ public class VjController : MonoBehaviour
     private CinemachineVirtualCamera[] vcameras;
     private CinemachineBrain cinemachineBrain;
     private GameObject[] cameras_object;
+    private float switchDelaySequence;
 
     private Animator[] mastersAnimators;
 
@@ -51,6 +53,7 @@ public class VjController : MonoBehaviour
     private Slider timeBlendCameras;
     private TMP_Dropdown[] m_DropdownLookAt = new TMP_Dropdown[3];
     private int[] mDropdownLookAt_value = new int[3];
+    private Button[] buttonsSequence = new Button[3]; 
 
 
 
@@ -103,6 +106,10 @@ public class VjController : MonoBehaviour
 
         timeBlendCameras = GameObject.Find("timeBlendCameras").GetComponent<Slider>();
 
+        buttonsSequence[0] = GameObject.Find("GOtoCAM1").GetComponent<Button>();
+        buttonsSequence[1] = GameObject.Find("GOtoCAM2").GetComponent<Button>();
+        buttonsSequence[2] = GameObject.Find("GOtoCAM3").GetComponent<Button>();    
+   
     }
 
     void Update()
@@ -129,6 +136,9 @@ public class VjController : MonoBehaviour
 
         // Camera Blend Time
         cinemachineBrain.m_DefaultBlend.m_Time = timeBlendCameras.value;
+
+        // Camera Sequence
+
     }
 
     public void setMasterOnePosition()
@@ -322,10 +332,5 @@ public class VjController : MonoBehaviour
             Debug.Log("buttonSwitch: " + button_dLightSwitch);
         }
     }
-
-
-
-
-
 
 }
