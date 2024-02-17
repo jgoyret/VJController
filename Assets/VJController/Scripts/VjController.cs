@@ -48,7 +48,8 @@ public class VjController : MonoBehaviour
     private int[] mDropdown_value = new int[3];
     private Slider[] slider_FOV = new Slider[3];
     private Slider[] speedAnimSlider = new Slider[3];
-    private Slider ligthIntesitySlider;
+    private Slider pointsIntesitySlider;
+    private Slider dlIntensitySlider;
     private Slider ligthAnimSpeed;
     private Slider timeBlendCameras;
     private TMP_Dropdown[] m_DropdownLookAt = new TMP_Dropdown[3];
@@ -100,7 +101,8 @@ public class VjController : MonoBehaviour
         for (int i = 0; i < m_DropdownLookAt.Length; i++)
             m_DropdownLookAt[i] = GameObject.Find("LookAtM" + (i + 1)).GetComponent<TMP_Dropdown>();
 
-        ligthIntesitySlider = GameObject.Find("LigthIntensitySlider").GetComponent<Slider>();
+        pointsIntesitySlider = GameObject.Find("PointsIntensitySlider").GetComponent<Slider>();
+        dlIntensitySlider = GameObject.Find("DLIntensitySlider").GetComponent<Slider>();
 
         ligthAnimSpeed = GameObject.Find("speedAnimLigth").GetComponent<Slider>();
 
@@ -281,12 +283,18 @@ public class VjController : MonoBehaviour
         if (modeLigth == "default")
         {
             for (int i = 0; i < ligths.Length; i++)
-                ligths[i].intensity = ligthIntesitySlider.value;
+                ligths[i].intensity = pointsIntesitySlider.value;
+
+            dLightOne.GetComponent<Light>().intensity = dlIntensitySlider.value;
+            dLightTwo.GetComponent<Light>().intensity = dlIntensitySlider.value;
         }
         else if (modeLigth == "random")
         {
             for (int i = 0; i < ligths.Length; i++)
-                ligths[i].intensity = UnityEngine.Random.Range(0f, ligthIntesitySlider.value);
+                ligths[i].intensity = UnityEngine.Random.Range(0f, pointsIntesitySlider.value);
+
+            dLightOne.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value);
+            dLightTwo.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value);
 
         }
     }

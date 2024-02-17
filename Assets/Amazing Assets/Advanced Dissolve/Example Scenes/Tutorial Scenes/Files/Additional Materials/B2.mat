@@ -223,7 +223,7 @@ Material:
     - _AdvancedDissolveCutoutSimpleMapsScreenSpaceUVScale: 0
     - _AdvancedDissolveCutoutSimpleMapsTriplanarMappingSpace: 0
     - _AdvancedDissolveCutoutStandardBaseInvert: 0
-    - _AdvancedDissolveCutoutStandardClip: 0.782
+    - _AdvancedDissolveCutoutStandardClip: 1
     - _AdvancedDissolveCutoutStandardMap1Channel: 3
     - _AdvancedDissolveCutoutStandardMap1Intensity: 1
     - _AdvancedDissolveCutoutStandardMap1Invert: 0
@@ -259,7 +259,7 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorPhaseOffset: 0
     - _AdvancedDissolveEdgeAdditionalColorTransparency: 1
     - _AdvancedDissolveEdgeAlphaOffset: 0
-    - _AdvancedDissolveEdgeBaseColorTransparency: 0.425
+    - _AdvancedDissolveEdgeBaseColorTransparency: 0.172
     - _AdvancedDissolveEdgeBaseShape: 0
     - _AdvancedDissolveEdgeBaseWidthGeometric: 0.1
     - _AdvancedDissolveEdgeBaseWidthParametric: 0.25
