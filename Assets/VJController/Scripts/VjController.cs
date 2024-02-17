@@ -286,7 +286,7 @@ public class VjController : MonoBehaviour
                 ligths[i].intensity = pointsIntesitySlider.value;
 
             dLightOne.GetComponent<Light>().intensity = dlIntensitySlider.value;
-            dLightTwo.GetComponent<Light>().intensity = dlIntensitySlider.value;
+            dLightTwo.GetComponent<Light>().intensity = dlIntensitySlider.value * 2;
         }
         else if (modeLigth == "random")
         {
@@ -294,7 +294,7 @@ public class VjController : MonoBehaviour
                 ligths[i].intensity = UnityEngine.Random.Range(0f, pointsIntesitySlider.value);
 
             dLightOne.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value);
-            dLightTwo.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value);
+            dLightTwo.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value * 2);
 
         }
     }
