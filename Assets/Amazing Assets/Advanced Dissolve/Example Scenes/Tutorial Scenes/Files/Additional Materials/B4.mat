@@ -223,7 +223,7 @@ Material:
     - _AdvancedDissolveCutoutSimpleMapsScreenSpaceUVScale: 0
     - _AdvancedDissolveCutoutSimpleMapsTriplanarMappingSpace: 0
     - _AdvancedDissolveCutoutStandardBaseInvert: 0
-    - _AdvancedDissolveCutoutStandardClip: 0.116
+    - _AdvancedDissolveCutoutStandardClip: 1
     - _AdvancedDissolveCutoutStandardMap1Channel: 3
     - _AdvancedDissolveCutoutStandardMap1Intensity: 1
     - _AdvancedDissolveCutoutStandardMap1Invert: 0
@@ -264,7 +264,7 @@ Material:
     - _AdvancedDissolveEdgeBaseWidthGeometric: 0.1
     - _AdvancedDissolveEdgeBaseWidthParametric: 0.25
     - _AdvancedDissolveEdgeBaseWidthSimple: 0.15
-    - _AdvancedDissolveEdgeBaseWidthStandard: 0.01
+    - _AdvancedDissolveEdgeBaseWidthStandard: 0.026
     - _AdvancedDissolveEdgeColor2Transparency: 1
     - _AdvancedDissolveEdgeColorTransparency: 1
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
@@ -410,7 +410,7 @@ Material:
     - _AdvancedDissolveCutoutSimpleMap3Tiling: {r: 1, g: 1, b: 1, a: 1}
     - _AdvancedDissolveCutoutStandardMap1Offset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap1Scroll: {r: 0, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutStandardMap1Tiling: {r: 0.5, g: 0.5, b: 1, a: 0}
+    - _AdvancedDissolveCutoutStandardMap1Tiling: {r: 0.1, g: 0.1, b: 1, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Offset: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Scroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutStandardMap2Tiling: {r: 0.4, g: 0.4, b: 1, a: 0}
@@ -431,7 +431,7 @@ Material:
     - _AdvancedDissolveEdgeAdditionalColorMapScroll: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveEdgeAdditionalColorMapTiling: {r: 1, g: 1, b: 1, a: 1}
     - _AdvancedDissolveEdgeBaseColor: {r: 0, g: 1, b: 1, a: 1}
-    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 10, g: 22025.465, b: 0, a: 0}
+    - _AdvancedDissolveEdgeBaseColorIntensity: {r: 5.97, g: 390.50558, b: 0, a: 0}
     - _AdvancedDissolveEdgeColor: {r: 0, g: 1, b: 1, a: 1}
     - _AdvancedDissolveEdgeColor2: {r: 1, g: 0, b: 0, a: 1}
     - _AdvancedDissolveEdgeColor2Intensity: {r: 0, g: 0, b: 0, a: 0}

@@ -88,13 +88,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: -1.33
+    m_Value: -35.81
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 50
+    m_Value: 55.01
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 12.55
+    m_Value: 25.67
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -245,7 +245,7 @@ MonoBehaviour:
   active: 1
   opacity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.187
   upperHemisphereOnly:
     m_OverrideState: 0
     m_Value: 1
@@ -260,7 +260,7 @@ MonoBehaviour:
     m_Value: 1
   shadowTint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0, b: 0, a: 1}
+    m_Value: {r: 0, g: 0.47993517, b: 1, a: 1}
   shadowResolution:
     m_OverrideState: 0
     m_Value: 256
@@ -288,13 +288,13 @@ MonoBehaviour:
       m_Value: 0
     rotation:
       m_OverrideState: 1
-      m_Value: 0
+      m_Value: 13.1
     tint:
       m_OverrideState: 1
-      m_Value: {r: 1, g: 1, b: 1, a: 1}
+      m_Value: {r: 0.082013145, g: 0.8676558, b: 0.9150943, a: 1}
     exposure:
       m_OverrideState: 1
-      m_Value: 0
+      m_Value: -1.41
     distortionMode:
       m_OverrideState: 1
       m_Value: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
       m_Value: 1
     castShadows:
       m_OverrideState: 1
-      m_Value: 0
+      m_Value: 1
   layerB:
     cloudMap:
       m_OverrideState: 1
