@@ -18,7 +18,7 @@ MonoBehaviour:
     m_Value: 2
   threshold:
     m_OverrideState: 1
-    m_Value: 0.41
+    m_Value: 0.8
   intensity:
     m_OverrideState: 1
     m_Value: 1
@@ -88,13 +88,13 @@ MonoBehaviour:
     m_Value: 1000
   baseHeight:
     m_OverrideState: 1
-    m_Value: -8.44
+    m_Value: -1.33
   maximumHeight:
     m_OverrideState: 1
     m_Value: 50
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 1.03
+    m_Value: 12.55
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
