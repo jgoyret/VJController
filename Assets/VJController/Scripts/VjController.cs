@@ -6,6 +6,8 @@ using UnityEngine.Rendering.HighDefinition;
 using Cinemachine;
 using UnityEngine.UI;
 using TMPro;
+using System;
+using UnityEditor.Rendering;
 
 public class VjController : MonoBehaviour
 {
@@ -25,6 +27,7 @@ public class VjController : MonoBehaviour
     private CinemachineVirtualCamera[] vcameras;
     private CinemachineBrain cinemachineBrain;
     private GameObject[] cameras_object;
+    private float switchDelaySequence;
 
     private Animator[] mastersAnimators;
 
@@ -33,7 +36,11 @@ public class VjController : MonoBehaviour
 
     public Animator ligth_animator;
     public HDAdditionalLightData[] ligths;
+    public GameObject dLightOne;
+    public GameObject dLightTwo;
 
+    private Boolean dLightSwitch = false;
+    private Boolean button_dLightSwitch = false;
     private string modeLigth = "default";
 
     // [Header("UI ELEMENTS")]
@@ -41,11 +48,13 @@ public class VjController : MonoBehaviour
     private int[] mDropdown_value = new int[3];
     private Slider[] slider_FOV = new Slider[3];
     private Slider[] speedAnimSlider = new Slider[3];
-    private Slider ligthIntesitySlider;
+    private Slider pointsIntesitySlider;
+    private Slider dlIntensitySlider;
     private Slider ligthAnimSpeed;
     private Slider timeBlendCameras;
     private TMP_Dropdown[] m_DropdownLookAt = new TMP_Dropdown[3];
     private int[] mDropdownLookAt_value = new int[3];
+    private Button[] buttonsSequence = new Button[3]; 
 
 
 
@@ -92,12 +101,17 @@ public class VjController : MonoBehaviour
         for (int i = 0; i < m_DropdownLookAt.Length; i++)
             m_DropdownLookAt[i] = GameObject.Find("LookAtM" + (i + 1)).GetComponent<TMP_Dropdown>();
 
-        ligthIntesitySlider = GameObject.Find("LigthIntensitySlider").GetComponent<Slider>();
+        pointsIntesitySlider = GameObject.Find("PointsIntensitySlider").GetComponent<Slider>();
+        dlIntensitySlider = GameObject.Find("DLIntensitySlider").GetComponent<Slider>();
 
         ligthAnimSpeed = GameObject.Find("speedAnimLigth").GetComponent<Slider>();
 
         timeBlendCameras = GameObject.Find("timeBlendCameras").GetComponent<Slider>();
 
+        buttonsSequence[0] = GameObject.Find("GOtoCAM1").GetComponent<Button>();
+        buttonsSequence[1] = GameObject.Find("GOtoCAM2").GetComponent<Button>();
+        buttonsSequence[2] = GameObject.Find("GOtoCAM3").GetComponent<Button>();    
+   
     }
 
     void Update()
@@ -124,6 +138,9 @@ public class VjController : MonoBehaviour
 
         // Camera Blend Time
         cinemachineBrain.m_DefaultBlend.m_Time = timeBlendCameras.value;
+
+        // Camera Sequence
+
     }
 
     public void setMasterOnePosition()
@@ -216,7 +233,7 @@ public class VjController : MonoBehaviour
     public void setFOVcamera(CinemachineVirtualCamera _vcam, float _value)
     {
         _vcam.m_Lens.FieldOfView = _value;
-        Debug.Log("Valor FOV: " + _value + " | " + _vcam);
+        //Debug.Log("Valor FOV: " + _value + " | " + _vcam);
     }
 
 
@@ -266,12 +283,18 @@ public class VjController : MonoBehaviour
         if (modeLigth == "default")
         {
             for (int i = 0; i < ligths.Length; i++)
-                ligths[i].intensity = ligthIntesitySlider.value;
+                ligths[i].intensity = pointsIntesitySlider.value;
+
+            dLightOne.GetComponent<Light>().intensity = dlIntensitySlider.value;
+            dLightTwo.GetComponent<Light>().intensity = dlIntensitySlider.value * 2;
         }
         else if (modeLigth == "random")
         {
             for (int i = 0; i < ligths.Length; i++)
-                ligths[i].intensity = Random.Range(0f, ligthIntesitySlider.value);
+                ligths[i].intensity = UnityEngine.Random.Range(0f, pointsIntesitySlider.value);
+
+            dLightOne.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value);
+            dLightTwo.GetComponent<Light>().intensity = UnityEngine.Random.Range(0f, dlIntensitySlider.value * 2);
 
         }
     }
@@ -283,9 +306,39 @@ public class VjController : MonoBehaviour
         ligth_animator.speed = ligthAnimSpeed.value;
     }
 
+    public void enableDLightSwitch()
+    {
+        dLightSwitch = !dLightSwitch;
 
+        if (!dLightSwitch)
+        {
+            dLightOne.SetActive(true);
+            dLightTwo.SetActive(true);
+        }
+        else
+        {
+            setDLightSwitch();
+        }
+        Debug.Log("enabledSwitch: " + dLightSwitch);
+    }
 
-
-
+    public void setDLightSwitch()
+    {
+        if (dLightSwitch)
+        {
+            button_dLightSwitch = !button_dLightSwitch;
+            if (button_dLightSwitch)
+            {
+                dLightOne.SetActive(true);
+                dLightTwo.SetActive(false);
+            }
+            else
+            {
+                dLightOne.SetActive(false);
+                dLightTwo.SetActive(true);
+            }
+            Debug.Log("buttonSwitch: " + button_dLightSwitch);
+        }
+    }
 
 }
