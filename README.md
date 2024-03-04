@@ -1,2 +1,2 @@
 # VJController
- Cameras system and assets controlers to do VJ in Unity 
+    Dynamic camera blend system and lighting control for VJs
