@@ -25,4 +25,7 @@ public class LineasLocas : MonoBehaviour
         lineRenderer.SetPositions(roquitas);
         lineRenderer.SetWidth(0, line_ancho);
     }
+
+    public void lineSetter(float value)
+    {  line_ancho = value; } 
 }
