@@ -326,7 +326,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0.921
+    - _Metallic: 0.009
     - _NormalMapStrength: 1
     - _OcclusionStrength: 1
     - _OpaqueCullMode: 2
@@ -339,7 +339,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _Smoothness: 0.945
+    - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

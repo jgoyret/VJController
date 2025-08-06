@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 1
     m_Value: 2
@@ -21,13 +21,13 @@ MonoBehaviour:
     m_Value: 0.44
   intensity:
     m_OverrideState: 1
-    m_Value: 0.747
+    m_Value: 0.525
   scatter:
     m_OverrideState: 1
     m_Value: 0.875
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 1, b: 0.81771946, a: 1}
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
   dirtTexture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953beb541740ddc499d005ee80c9ff29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   quality:
     m_OverrideState: 1
     m_Value: 1
@@ -94,7 +94,7 @@ MonoBehaviour:
     m_Value: 609
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 100
+    m_Value: 500
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
@@ -176,7 +176,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 5
+    m_Value: 2
   multiplier:
     m_OverrideState: 1
     m_Value: 1
@@ -200,13 +200,13 @@ MonoBehaviour:
     m_Value: 0
   top:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.17916617, b: 0.6698113, a: 1}
+    m_Value: {r: 0.8867924, g: 0.08784264, b: 0.08784264, a: 1}
   middle:
     m_OverrideState: 1
-    m_Value: {r: 0.08597367, g: 0.52872914, b: 0.7924528, a: 1}
+    m_Value: {r: 0.50600964, g: 0.19953722, b: 0.7169812, a: 1}
   bottom:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.3301887, b: 0.08579765, a: 1}
+    m_Value: {r: 0.13007298, g: 0.1618618, b: 0.745283, a: 1}
   gradientDiffusion:
     m_OverrideState: 1
     m_Value: 1.6
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f086a068d4c5889438831b3ae9afc11c, type: 3}
   m_Name: Tonemapping
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 2
@@ -369,7 +369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
   m_Name: Exposure
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   mode:
     m_OverrideState: 1
     m_Value: 0
